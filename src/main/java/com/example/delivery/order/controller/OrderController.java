@@ -40,7 +40,7 @@ public class OrderController {
     }
 
     //주문 취소(customer)
-    @PostMapping("/api/orderlist/{id}/cancel")
+    @PatchMapping("/api/orderlist/{id}/cancel")
     public ResponseEntity<OrderResponse> cancelOrder(
             @PathVariable Long id,
             @AuthenticationPrincipal UserDetailsImpl userDetails
@@ -49,7 +49,7 @@ public class OrderController {
     }
     
     //주문 상태 변경(owner)
-    @PostMapping("/api/orderlist/{id}/status")
+    @PatchMapping("/api/orderlist/{id}/status")
     public ResponseEntity<OrderResponse> statusOrder(
             @PathVariable Long id,
             @AuthenticationPrincipal UserDetailsImpl userDetails
