@@ -190,7 +190,7 @@ CUSTOMER가 메뉴를 주문합니다.
 
 ## 4-3. 주문 취소
 
-### `POST /api/orderlist/{id}/cancel`
+### `PATCH /api/orderlist/{id}/cancel`
 
 CUSTOMER가 본인의 주문을 취소합니다.
 
@@ -208,7 +208,7 @@ CUSTOMER가 본인의 주문을 취소합니다.
 
 ## 4-4. 주문 상태 변경
 
-### `POST /api/orderlist/{id}/status`
+### `PATCH /api/orderlist/{id}/status`
 
 OWNER가 본인 메뉴에 들어온 주문의 상태를 변경합니다.
 
