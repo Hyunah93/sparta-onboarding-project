@@ -4,6 +4,7 @@ import com.example.delivery.global.security.UserDetailsImpl;
 import com.example.delivery.payment.dto.request.PaymentRequest;
 import com.example.delivery.payment.dto.response.PaymentResponse;
 import com.example.delivery.payment.service.PaymentService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -22,7 +23,7 @@ public class PaymentController {
 
     @PostMapping("/api/payment")
     public ResponseEntity<PaymentResponse> createPayment(
-            @RequestBody PaymentRequest request,
+            @Valid @RequestBody PaymentRequest request,
             @AuthenticationPrincipal UserDetailsImpl userDetails
             ){
         return ResponseEntity.status(HttpStatus.CREATED)
